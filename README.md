@@ -1,4 +1,4 @@
-# ConceptFocusHTTPWebApis
+
 # Concept Focus: HTTP & Web APIs
 
 ## Challenge Rating
