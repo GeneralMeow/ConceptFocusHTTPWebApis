@@ -1,0 +1,13 @@
+.box {
+  width: 500px;
+  height: 500px;
+  background-color: #E7E7E7;
+  border: 1px solid #000;
+  margin: 0 auto;
+  text-align: center;
+  display: table;
+}
+.box .vertical-txt {
+  display: table-cell;
+  vertical-align: middle;
+}
