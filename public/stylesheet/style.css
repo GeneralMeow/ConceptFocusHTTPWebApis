@@ -1,6 +1,10 @@
+.logoContainer {
+  margin-top: 10em;
+}
+
 .box {
   width: 500px;
-  height: 500px;
+  height: 200px;
   background-color: #E7E7E7;
   border: 1px solid #000;
   margin: 0 auto;
@@ -10,4 +14,19 @@
 .box .vertical-txt {
   display: table-cell;
   vertical-align: middle;
+}
+
+.homeNav {
+  margin-top: 1em;
+  text-align: center;
+}
+
+#createNewItinerary {
+  margin-right: 5em;
+}
+
+body {
+  background-position: center;
+  background-image: url("../images/20-tropical-island-destinations-you-must-visit-9.jpg");
+  background-size: cover;
 }
