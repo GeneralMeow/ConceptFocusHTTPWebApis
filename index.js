@@ -9,6 +9,9 @@ app.get('/', (request, response) => {
   response.render('index')
 })
 
+app.get('/new-itinerary', (request, response) => {
+  response.render('new-itinerary')
+})
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.listen(3000)
