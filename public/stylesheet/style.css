@@ -30,3 +30,14 @@ body {
   background-image: url("../images/20-tropical-island-destinations-you-must-visit-9.jpg");
   background-size: cover;
 }
+
+.welcome {
+  border: 3px solid wheat;
+  text-align: center;
+  font-size: 50pt;
+  color: white;
+}
+
+.input, .saveButton {
+  margin-top: 2em;
+}

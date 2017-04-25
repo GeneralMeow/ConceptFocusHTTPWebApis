@@ -1,0 +1,16 @@
+extends layout
+block content
+
+  body
+    .banner
+      .welcome Welcome %user%
+
+    form(action="/create-itinerary" method="POST")
+      .input
+        input(type="text" style="width: 300px" placeholder="Enter Airline")
+      .input
+        input(type="text" style="width: 300px" placeholder="Enter Hotel")
+      .input
+        input(type="text" style="width: 300px" placeholder="Enter Budget")
+      .saveButton
+        button(type="submit") Save
