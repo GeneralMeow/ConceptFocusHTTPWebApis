@@ -48,7 +48,7 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
 
 ## Specifications
 
-- [ ] Artifact produced is a GitHub repo.
+- [X] Artifact produced is a GitHub repo.
 - [ ] GitHub repo contains a web server.
 - [ ] Can run the command `npm start` to start the web server at port 3000.
 - [ ] The web server source code is written using the [Express][express] library.
