@@ -1,6 +1,3 @@
-.logoContainer {
-  margin-top: 10em;
-}
 
 .box {
   width: 500px;
@@ -16,6 +13,13 @@
   vertical-align: middle;
 }
 
+/*TODO: figure out why this css styling messes up the page*/
+.logoContainer {
+margin-top: 10px;
+padding-top: 200px;
+
+}
+
 .homeNav {
   margin-top: 1em;
   text-align: center;
@@ -26,9 +30,12 @@
 }
 
 body {
-  background-position: center;
+  background-position: top;
   background-image: url("../images/20-tropical-island-destinations-you-must-visit-9.jpg");
-  background-size: cover;
+  background-size: 100%;
+  background-attachment:fixed;
+   background-position: left top;
+  /*margin-top:-200px;*/
 }
 
 .welcome {
