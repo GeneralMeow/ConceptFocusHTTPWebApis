@@ -61,7 +61,7 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
   - [X] `200` (OK)
   - [X] `201` (Created)
   - [ ] `400` (Bad Request)
-  - [ ] `301` (Moved Permanently)
+  - [X] `301` (Moved Permanently)
   - [X] `403` (Forbidden)
   - [X] `404` (Not Found)
   - [ ] `500` (Internal Server Error)
