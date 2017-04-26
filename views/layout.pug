@@ -3,10 +3,12 @@ html
     title Welcome to your Travels
   link(rel="stylesheet", href="/stylesheet/style.css")
   body
+    script(src="src/main.js")
     block content
     footer
       block foot
         .siteMap
-          button#mapButton Home
-          button#mapButton Contact Us
-          button#mapButton About Us
+          button#mapButton(onclick="redirectHome()") Home
+          button#mapButton(onclick="location.href='/contact'") Contact Us
+          button#mapButton(onclick="location.href='/about'") About Us
+          button#mapButton(onclick="location.href='/404'") Break me
