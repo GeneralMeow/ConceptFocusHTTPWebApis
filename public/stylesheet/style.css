@@ -1,12 +1,10 @@
-.logoContainer {
-  margin-top: 10em;
-}
 
 .box {
   width: 500px;
   height: 200px;
   background-color: #E7E7E7;
   border: 1px solid #000;
+  border-radius: 5px;
   margin: 0 auto;
   text-align: center;
   display: table;
@@ -16,28 +14,101 @@
   vertical-align: middle;
 }
 
+.logoContainer {
+margin-top: 10px;
+padding-top: 150px;
+}
+
 .homeNav {
   margin-top: 1em;
   text-align: center;
 }
 
+#viewItinerary {
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
 #createNewItinerary {
   margin-right: 5em;
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 
 body {
-  background-position: center;
+  background-position: top;
   background-image: url("../images/20-tropical-island-destinations-you-must-visit-9.jpg");
-  background-size: cover;
+  background-size: 100%;
+  background-attachment:fixed;
+   background-position: left top;
 }
 
 .welcome {
   border: 3px solid wheat;
+  width: 100%;
   text-align: center;
   font-size: 50pt;
   color: white;
 }
 
-.input, .saveButton {
-  margin-top: 2em;
+.input {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 15px 0;
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+   outline: none;
+   align-items: center;
+}
+
+input:focus {
+    border: 3px solid red;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.saveButton {
+  margin-right: 5em;
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
