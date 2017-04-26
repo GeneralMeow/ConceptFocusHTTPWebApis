@@ -4,12 +4,11 @@ block content
   body
     .banner
       .welcome Welcome %user%
-
     form(action="/create-itinerary" method="POST")
       .input
-        input(type='text' style="width: 333px" placeholder='Enter Airline')
+        input(name="airline" type='text' style="width: 333px" placeholder='Enter Airline')
       .input
-        input(type="text" style="width: 333px" placeholder="Enter Hotel")
+        input(name="hotel" type="text" style="width: 333px" placeholder="Enter Hotel")
       .input
-        input(type="text" style="width: 333px" placeholder="Enter Budget")
+        input(name="budget" type="text" style="width: 333px" placeholder="Enter Budget")
       button.saveButton(type="submit") Save

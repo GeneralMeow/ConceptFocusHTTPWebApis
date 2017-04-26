@@ -1,11 +1,10 @@
 extends layout
 block content
-
   body
     div(class="logoContainer")
       .box
         .vertical-txt
           img(src='http://i64.tinypic.com/2nulnd3.png', border='0', alt='Image and video hosting by TinyPic')
     .homeNav
-      button#createNewItinerary Create Itinerary
+      button#createNewItinerary(onclick="location.href='/new-itinerary'") Create Itinerary
       button#viewItinerary View Itinerary

@@ -1,0 +1,23 @@
+extends layout
+block content
+  body
+    .banner 
+      .welcome Your Next Trip to %blahsville%
+    div
+      span.tripDetails
+        for detail in details
+          ul Airline:
+            li= detail.airline
+          ul Accomadations:
+            li= detail.hotel
+    div
+      span.budget
+        for detail in details
+          ul Available Funds:
+            li= detail.budget
+    div
+      span.forecast
+    div
+      span.packingList
+    div
+      span.highlights

@@ -67,6 +67,15 @@ body {
    background-position: left top;
 }
 
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  text-align: right;
+}
+
 .welcome {
   border: 3px solid wheat;
   width: 100%;
@@ -111,4 +120,69 @@ form {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+#mapButton {
+  margin-right: 5px;
+  padding: 3px;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+.tripDetails {
+  position: absolute;
+  top: 150px;
+  width: 400px;
+  height: 500px;
+  color: white;
+  border: 1px solid white;
+}
+
+.budget {
+  position: absolute;
+  top: 700px;
+  width: 400px;
+  height: 150px;
+  color: white;
+  border: 1px solid white;
+}
+
+.forecast {
+  right: 2.5px;
+  top: 150px;
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  color: white;
+  border: 1px solid white;
+}
+
+.packingList {
+  right: 2.5px;
+  top: 350px;
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  color: white;
+  border: 1px solid white;
+}
+
+.highlights {
+  position: absolute;
+  width: 1025px;
+  height: 700px;
+  left: 450px;
+  top: 150px;
+  color: white;
+  border: 1px solid white;
 }

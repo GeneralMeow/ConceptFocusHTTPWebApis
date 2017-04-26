@@ -1,17 +1,15 @@
 const express = require('express')
 const path = require('path')
+const bodyParser = require('body-parser')
 const app = express()
+const routes = require('./routes/routes')
 
-app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
-app.get('/', (request, response) => {
-  response.render('index')
-})
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
-app.get('/new-itinerary', (request, response) => {
-  response.render('new-itinerary')
-})
+app.use('/', routes)
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.listen(3000)
