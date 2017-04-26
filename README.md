@@ -60,7 +60,7 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
 - [ ] The web server makes use of the following response status codes
   - [X] `200` (OK)
   - [X] `201` (Created)
-  - [ ] `400` (Bad Request)
+  - [X] `400` (Bad Request)
   - [X] `301` (Moved Permanently)
   - [X] `403` (Forbidden)
   - [X] `404` (Not Found)
