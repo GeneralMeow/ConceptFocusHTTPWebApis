@@ -48,12 +48,12 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
 ## Specifications
 
 - [X] Artifact produced is a GitHub repo.
-- [x] GitHub repo contains a web server.
-- [x] Can run the command `npm start` to start the web server at port 3000.
-- [x] The web server source code is written using the [Express][express] library.
-- [x] The web server handles routes for the following HTTP verbs
-  - [x] `GET`
-  - [x] `POST`
+- [X] GitHub repo contains a web server.
+- [X] Can run the command `npm start` to start the web server at port 3000.
+- [X] The web server source code is written using the [Express][express] library.
+- [ ] The web server handles routes for the following HTTP verbs
+  - [X] `GET`
+  - [X] `POST`
   - [ ] `PUT/PATCH`
   - [ ] `DELETE`
 - [ ] Examples of each HTTP verb usage are listed and linked to in the README
@@ -94,13 +94,21 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
   - [ ] Examples show full HTTP message header
   - [ ] Examples show full HTTP message body
 - [ ] The web server makes the following request types to an external API
-  - [ ] Get a resource
+  - [X] Get a resource
   - [ ] Create a resource
   - [ ] Update a resource
   - [ ] Delete a resource
 - [ ] Examples of each request type to the external API are listed and linked to in the README
-- [ ] The best resources you find for learning testing are added to a file `resources.md`
-- [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license]
+- [X] The best resources you find for learning testing are added to a file `resources.md`
+- [X] The artifact produced is properly licensed, preferably with the [MIT license][mit-license]
+
+
+
+
+
+
+
+
 
 ## Stretch
 
