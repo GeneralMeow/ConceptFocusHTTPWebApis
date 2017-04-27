@@ -33,9 +33,7 @@ router.get('/itinerary', (request, response) => {
   Promise.all([db.getDetails(), fetchWeather()])
   // db.getDetails()
   .then( (values) => {
-    const renameMe = {values}
-    console.log('renameMe====>', renameMe)
-    response.render('itinerary', renameMe)
+    response.render('itinerary', {values})
   })
 })
 

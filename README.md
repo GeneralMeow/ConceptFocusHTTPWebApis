@@ -48,26 +48,26 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
 ## Specifications
 
 - [X] Artifact produced is a GitHub repo.
-- [ ] GitHub repo contains a web server.
-- [ ] Can run the command `npm start` to start the web server at port 3000.
-- [ ] The web server source code is written using the [Express][express] library.
-- [ ] The web server handles routes for the following HTTP verbs
-  - [ ] `GET`
-  - [ ] `POST`
+- [x] GitHub repo contains a web server.
+- [x] Can run the command `npm start` to start the web server at port 3000.
+- [x] The web server source code is written using the [Express][express] library.
+- [x] The web server handles routes for the following HTTP verbs
+  - [x] `GET`
+  - [x] `POST`
   - [ ] `PUT/PATCH`
   - [ ] `DELETE`
 - [ ] Examples of each HTTP verb usage are listed and linked to in the README
 - [ ] The web server makes use of the following response status codes
-  - [ ] `200` (OK)
-  - [ ] `201` (Created)
+  - [x] `200` (OK)
+  - [x] `201` (Created)
   - [ ] `400` (Bad Request)
-  - [ ] `301` (Moved Permanently)
-  - [ ] `403` (Forbidden)
-  - [ ] `404` (Not Found)
-  - [ ] `500` (Internal Server Error)
+  - [x] `301` (Moved Permanently)
+  - [x] `403` (Forbidden)
+  - [x] `404` (Not Found)
+  - [x] `500` (Internal Server Error)
 - [ ] Examples of each status code usage are listed and linked to in the README
 - [ ] The web server uses URL components in routing and responding
-  - [ ] Different paths trigger different routes
+  - [x] Different paths trigger different routes
   - [ ] Values from the URL query string are used in a route
 - [ ] Examples of routing and query string usage are listed and linked to in the README
 - [ ] The web server makes use of the following request headers
@@ -85,10 +85,10 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
   - [ ] `Content-Length`
 - [ ] Examples of each response header usage are listed and linked to in the README
 - [ ] The web server serves different types of resources
-  - [ ] Asset files (CSS, images)
-  - [ ] Static HTML
+  - [x] Asset files (CSS, images)
+  - [x] Static HTML
   - [ ] Static JSON
-  - [ ] Dynamic resources (content of response changes based on query params, request headers, and/or application state)
+  - [x] Dynamic resources (content of response changes based on query params, request headers, and/or application state)
 - [ ] Examples of each response type are listed and linked to in the README
 - [ ] Example of a raw HTTP request and the server's raw HTTP response are included in the README
   - [ ] Examples show full HTTP message header

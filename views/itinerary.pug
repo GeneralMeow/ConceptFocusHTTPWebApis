@@ -5,14 +5,14 @@ block content
       .welcome Your Next Trip to %blahsville%
     div
       span.tripDetails
-        for detail in values[0][0]
+        for detail in values[0]
           ul Airline:
             li= detail.airline
           ul Accomadations:
             li= detail.hotel
     div
       span.budget
-        for detail in values[0][1]
+        for detail in values[0]
           ul Available Funds:
             li= '$' + detail.budget
     div
@@ -32,19 +32,47 @@ block content
           height: 70%;
           background-color: grey;
           }
-        h3 My Google Maps Demo
+        h3 Based on your current GPS coordinates...
           #map
           script.
-            function initMap() {
-              var uluru = {lat: -25.363, lng: 131.044};
-              var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: uluru
-              });
-              var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-              });
-            }
+            var map, infoWindow;
+                  function initMap() {
+                    map = new google.maps.Map(document.getElementById('map'), {
+                      center: {lat: -34.397, lng: 150.644},
+                      zoom: 15
+                    });
+                    infoWindow = new google.maps.InfoWindow;
+
+                    // Try HTML5 geolocation.
+                    if (navigator.geolocation) {
+                      navigator.geolocation.getCurrentPosition(function(position) {
+                        var pos = {
+                          lat: position.coords.latitude,
+                          lng: position.coords.longitude
+                        };
+
+                        infoWindow.setPosition(pos);
+                        infoWindow.setContent('Location found.');
+                        infoWindow.open(map);
+                        map.setCenter(pos);
+                      }, function() {
+                        handleLocationError(true, infoWindow, map.getCenter());
+                      });
+                    } else {
+                      // Browser doesn't support Geolocation
+                      handleLocationError(false, infoWindow, map.getCenter());
+                    }
+                  }
+
+                  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent(browserHasGeolocation ?
+                                          'Error: The Geolocation service failed.' :
+                                          'Error: Your browser doesn\'t support geolocation.');
+                    infoWindow.open(map);
+                  }
+              //- console.log('getCenter', map.getCenter().toJSON())
+              //- console.log('setCenter', map.setCenter({lat: 37.804, lng: -122.271}))
+
           script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDVuHjrpFq3DpQfAX-MUBGVKtOPZEQlBbM&callback=initMap')
           script(src='http://api.openweathermap.org/data/2.5/forecast?id=2154624&APPID=253e1c4d472cec6a63788025b1f71efb')
