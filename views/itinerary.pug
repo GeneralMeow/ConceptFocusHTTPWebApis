@@ -5,19 +5,46 @@ block content
       .welcome Your Next Trip to %blahsville%
     div
       span.tripDetails
-        for detail in details
+        for detail in values[0][0]
           ul Airline:
             li= detail.airline
           ul Accomadations:
             li= detail.hotel
     div
       span.budget
-        for detail in details
+        for detail in values[0][1]
           ul Available Funds:
             li= '$' + detail.budget
     div
       span.forecast
+        for data in values[1][0]
+          div= data
     div
       span.packingList
     div
       span.highlights
+        style.
+          #map {
+          position: absolute;
+          left: 5%;
+          top: 15%;
+          width: 90%;
+          height: 70%;
+          background-color: grey;
+          }
+        h3 My Google Maps Demo
+          #map
+          script.
+            function initMap() {
+              var uluru = {lat: -25.363, lng: 131.044};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+              });
+              var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+              });
+            }
+          script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDVuHjrpFq3DpQfAX-MUBGVKtOPZEQlBbM&callback=initMap')
+          script(src='http://api.openweathermap.org/data/2.5/forecast?id=2154624&APPID=253e1c4d472cec6a63788025b1f71efb')
