@@ -58,16 +58,16 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
   - [ ] `DELETE`
 - [ ] Examples of each HTTP verb usage are listed and linked to in the README
 - [ ] The web server makes use of the following response status codes
-  - [X] `200` (OK)
-  - [X] `201` (Created)
-  - [X] `400` (Bad Request)
-  - [X] `301` (Moved Permanently)
-  - [X] `403` (Forbidden)
-  - [X] `404` (Not Found)
-  - [ ] `500` (Internal Server Error)
+  - [x] `200` (OK)
+  - [x] `201` (Created)
+  - [ ] `400` (Bad Request)
+  - [x] `301` (Moved Permanently)
+  - [x] `403` (Forbidden)
+  - [x] `404` (Not Found)
+  - [x] `500` (Internal Server Error)
 - [ ] Examples of each status code usage are listed and linked to in the README
-- [X] The web server uses URL components in routing and responding
-  - [X] Different paths trigger different routes
+- [ ] The web server uses URL components in routing and responding
+  - [x] Different paths trigger different routes
   - [ ] Values from the URL query string are used in a route
 - [ ] Examples of routing and query string usage are listed and linked to in the README
 - [ ] The web server makes use of the following request headers
@@ -85,10 +85,10 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
   - [ ] `Content-Length`
 - [ ] Examples of each response header usage are listed and linked to in the README
 - [ ] The web server serves different types of resources
-  - [X] Asset files (CSS, images)
-  - [X] Static HTML
+  - [x] Asset files (CSS, images)
+  - [x] Static HTML
   - [ ] Static JSON
-  - [X] Dynamic resources (content of response changes based on query params, request headers, and/or application state)
+  - [x] Dynamic resources (content of response changes based on query params, request headers, and/or application state)
 - [ ] Examples of each response type are listed and linked to in the README
 - [ ] Example of a raw HTTP request and the server's raw HTTP response are included in the README
   - [ ] Examples show full HTTP message header
