@@ -94,7 +94,7 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
   - [ ] Examples show full HTTP message header
   - [ ] Examples show full HTTP message body
 - [ ] The web server makes the following request types to an external API
-  - [ ] Get a resource
+  - [X] Get a resource
   - [ ] Create a resource
   - [ ] Update a resource
   - [ ] Delete a resource
