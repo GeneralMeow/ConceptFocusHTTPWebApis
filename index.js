@@ -27,5 +27,5 @@ app.use((error, request, response, next) => {
 
 app.use((error, request, response, next) => {
   console.error(error.stack)
-  response.status(500).send("<div>It's not you, it's us (but mostly you)</div>")
+  response.status(500).send("<img src='https://slack-imgs.com/?c=1&url=http%3A%2F%2Fmedia2.giphy.com%2Fmedia%2F22u0JK3ZOtkuk%2Fgiphy-downsized.gif' alt='It's not you, it's us (but mostly you)'>")
 })
