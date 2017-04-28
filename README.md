@@ -56,7 +56,10 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
   
   
     `// get homepage
+    
+    
     router.get('/', (request, response) => {
+    
       response.render('index')
     .then(() => {
     response.status(200)
