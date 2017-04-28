@@ -53,13 +53,16 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
 - [X] The web server source code is written using the [Express][express] library.
 - [ ] The web server handles routes for the following HTTP verbs
   - [X] `GET`
+  
+  
     `// get homepage
-router.get('/', (request, response) => {
-  response.render('index')
-  .then(() => {
+    router.get('/', (request, response) => {
+      response.render('index')
+    .then(() => {
     response.status(200)
   })
 })`
+
   - [X] `POST`
   - [X] `PUT/PATCH`
   - [ ] `DELETE`
