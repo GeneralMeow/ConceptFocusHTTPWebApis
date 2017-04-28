@@ -21,11 +21,17 @@ block content
           div= data
     div
       span.packingList
+        div.packingBanner Your Suitcase
+        form.packItem(action="/pack" method="POST")
+          input.toPack(name="thing" placeholder="I NEED TO PACK THIS THING!!")
+          button.packedIt(type="submit") Packed!
         for items in values[2]
           ul
             form(action=`/itinerary/${items.id}` method='PUT')
               input(type='checkbox')
               li(onclick=`clicky(${items.id})`, id=items.id)=items.item
+        form(action='/clear' method='DELETE')
+          button.clearSuitcase(onclick='clearList()') Unpack Everything!
     div
       span.highlights
         style.
@@ -76,8 +82,5 @@ block content
                                           'Error: Your browser doesn\'t support geolocation.');
                     infoWindow.open(map);
                   }
-              //- console.log('getCenter', map.getCenter().toJSON())
-              //- console.log('setCenter', map.setCenter({lat: 37.804, lng: -122.271}))
-
           script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDVuHjrpFq3DpQfAX-MUBGVKtOPZEQlBbM&callback=initMap')
           script(src='http://api.openweathermap.org/data/2.5/forecast?id=2154624&APPID=253e1c4d472cec6a63788025b1f71efb')
