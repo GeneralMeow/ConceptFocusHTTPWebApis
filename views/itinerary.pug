@@ -21,7 +21,11 @@ block content
           div= data
     div
       span.packingList
-        button#mapButton(onclick="redirectEdit()") Edit Packing List
+        for items in values[2]
+          ul
+            form(action=`/itinerary/${items.id}` method='PUT')
+              input(type='checkbox')
+              li(onclick=`clicky(${items.id})`, id=items.id)=items.item
     div
       span.highlights
         style.

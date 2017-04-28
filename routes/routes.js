@@ -29,19 +29,26 @@ router.post('/create-itinerary', (request, response, next) => {
     })
 })
 
+router.put('/itinerary/:id', (request, response, next) => {
+  const {item} = request.body
+  const {id} = request.params
+  db.updateSuitcase(id, item)
+  .then(() => {
+    response.sendStatus(201)
+  })
+  .catch((error) => {
+    return next(error)
+  })
+})
+
 // get existing itinerary
 router.get('/itinerary', (request, response) => {
-  Promise.all([db.getDetails(), fetchWeather()])
-  // db.getDetails()
+  Promise.all([db.getDetails(), fetchWeather(), db.getSuitcase()])
   .then( (values) => {
     response.render('itinerary', {values})
   })
 })
 
-//get packing list
-router.get('/edit', (request, response) => {
-  response.render('edit')
-})
 
 router.get('/contact', (request, response) => {
   response.status(403).send("<div>Error 403: You are not authorized to contact this organization.</div>")
