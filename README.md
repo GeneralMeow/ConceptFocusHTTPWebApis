@@ -187,7 +187,7 @@ router.post('/create-itinerary', (request, response, next) => {
     })
 }
 `
-  - [ ] `Origin`
+  - [X] `Origin`
   - [X] `Content Type`
   - [ ] `Authorization`
   - [ ] `Cookie`
