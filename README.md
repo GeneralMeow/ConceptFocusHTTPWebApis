@@ -160,11 +160,37 @@ router.post('/create-itinerary', (request, response, next) => {
 })`
 - [X] The web server makes use of the following request headers
   - [X] `Accept`
+  
+  `function clicky(i) {
+
+  let it = document.getElementById(i);
+
+  it.setAttribute('contentEditable', true);
+  it.addEventListener('keypress', function(e) {
+      let key = e.which || e.keyCode;
+      if (key === 13) {
+          it.setAttribute("contentEditable", false)
+
+          fetch( `/itinerary/${i}`, {
+            method: 'PUT',
+            body: JSON.stringify({ item: it.innerText, id: i }),
+            headers: new Headers({
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            })
+          })
+          .then(jsonRes => {
+            return jsonRes.text()
+          })
+        }
+    })
+}
+`
   - [ ] `Origin`
   - [X] `Content Type`
   - [ ] `Authorization`
   - [ ] `Cookie`
-- [ ] Examples of each request header usage are listed and linked to in the README
+- [X] Examples of each request header usage are listed and linked to in the README
 - [ ] The web server makes use of the following response headers
   - [ ] `Location`
   - [ ] `Set-Cookie`
