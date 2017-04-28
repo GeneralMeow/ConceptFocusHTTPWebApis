@@ -96,12 +96,52 @@ router.post('/create-itinerary', (request, response, next) => {
 - [X] Examples of each HTTP verb usage are listed and linked to in the README
 - [X] The web server makes use of the following response status codes
   - [x] `200` (OK)
+  
+    `// get homepage
+    
+    router.get('/', (request, response) => {
+      response.render('index')
+    .then(() => {
+    response.status(200)
+  })
+})`
+    https://github.com/GeneralMeow/ConceptFocusHTTPWebApis/blob/master/routes/routes.js`
   - [x] `201` (Created)
-  - [ ] `400` (Bad Request)
+   `//create new-itinerary
+router.post('/create-itinerary', (request, response, next) => {
+  const {airline, hotel, budget} = request.body
+    db.saveItinerary(airline, hotel, budget)
+    .then(() => {
+      response.redirect(201, 'itinerary')
+    })
+    .catch((error) => {
+      return next(error)
+    })
+})`
+  https://github.com/GeneralMeow/ConceptFocusHTTPWebApis/blob/master/routes/routes.js
+  
+  - [X] `400` (Bad Request)
+  
+ 
   - [x] `301` (Moved Permanently)
+  
+  `router.get('/about', (request, response) => {
+  response.status(301).send("<div>Error 301: Organization information has been moved to the dark side of the moon. Please turn on sound to hear a message from our sponsors!</div>")
+})`
+  https://github.com/GeneralMeow/ConceptFocusHTTPWebApis/blob/master/routes/routes.js
   - [x] `403` (Forbidden)
+  
+  `router.get('/contact', (request, response) => {
+  response.status(403).send("<div>Error 403: You are not authorized to contact this organization.</div>")
+})`
+   https://github.com/GeneralMeow/ConceptFocusHTTPWebApis/blob/master/routes/routes.js
   - [x] `404` (Not Found)
-  - [x] `500` (Internal Server Error)
+  
+  `router.get('/404', (request, response) => {
+  response.render('404')
+})`
+  - [ ] `500` (Internal Server Error)
+  
 - [ ] Examples of each status code usage are listed and linked to in the README
 - [X] The web server uses URL components in routing and responding
   - [x] Different paths trigger different routes
