@@ -54,7 +54,7 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
 - [ ] The web server handles routes for the following HTTP verbs
   - [X] `GET`
   - [X] `POST`
-  - [ ] `PUT/PATCH`
+  - [X] `PUT/PATCH`
   - [ ] `DELETE`
 - [ ] Examples of each HTTP verb usage are listed and linked to in the README
 - [ ] The web server makes use of the following response status codes
@@ -71,9 +71,9 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
   - [ ] Values from the URL query string are used in a route
 - [ ] Examples of routing and query string usage are listed and linked to in the README
 - [ ] The web server makes use of the following request headers
-  - [ ] `Accept`
+  - [X] `Accept`
   - [ ] `Origin`
-  - [ ] `Content Type`
+  - [X] `Content Type`
   - [ ] `Authorization`
   - [ ] `Cookie`
 - [ ] Examples of each request header usage are listed and linked to in the README
@@ -84,10 +84,10 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
   - [ ] `Access-Control-Allow-Origin`
   - [ ] `Content-Length`
 - [ ] Examples of each response header usage are listed and linked to in the README
-- [ ] The web server serves different types of resources
+- [X] The web server serves different types of resources
   - [x] Asset files (CSS, images)
   - [x] Static HTML
-  - [ ] Static JSON
+  - [X] Static JSON
   - [x] Dynamic resources (content of response changes based on query params, request headers, and/or application state)
 - [ ] Examples of each response type are listed and linked to in the README
 - [ ] Example of a raw HTTP request and the server's raw HTTP response are included in the README
