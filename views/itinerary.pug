@@ -1,7 +1,7 @@
 extends layout
 block content
   body
-    .banner 
+    .banner
       .welcome Your Next Trip to %blahsville%
     div
       span.tripDetails
@@ -21,6 +21,7 @@ block content
           div= data
     div
       span.packingList
+        button#mapButton(onclick="redirectEdit()") Edit Packing List
     div
       span.highlights
         style.
