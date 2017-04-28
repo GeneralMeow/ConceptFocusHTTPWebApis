@@ -51,7 +51,7 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
 - [X] GitHub repo contains a web server.
 - [X] Can run the command `npm start` to start the web server at port 3000.
 - [X] The web server source code is written using the [Express][express] library.
-- [X] The web server handles routes for the following HTTP verbs
+- [X] The web server handles routes for the following HTTP verbs 
   - [X] `GET`
   
   
