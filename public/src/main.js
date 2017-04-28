@@ -30,24 +30,27 @@ const redirectEdit = () => {
   window.location="/edit"
 }
 
-// function clicky(i) {
-//
-//   let it = document.getElementById(`${i}`);
-//
-//   it.contentEditable = 'true';
-//   it.addEventListener('keypress', function(e) {
-//       let key = e.which || e.keyCode;
-//       if (key === 13) {
-//           it.setAttribute("contentEditable", "false")
-//
-//           fetch( `/edit`, {
-//             method: 'POST',
-//             body: JSON.stringify({ newToDo: it.innerText, id: i }),
-//             headers: new Headers({
-//               "Content-Type": "application/json",
-//               "Accept": "application/json"
-//             })
-//           })
-//         }
-//     })
-// }
+function clicky(i) {
+
+  let it = document.getElementById(i);
+
+  it.setAttribute('contentEditable', true);
+  it.addEventListener('keypress', function(e) {
+      let key = e.which || e.keyCode;
+      if (key === 13) {
+          it.setAttribute("contentEditable", false)
+
+          fetch( `/itinerary/${i}`, {
+            method: 'PUT',
+            body: JSON.stringify({ item: it.innerText, id: i }),
+            headers: new Headers({
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            })
+          })
+          .then(jsonRes => {
+            return jsonRes.text()
+          })
+        }
+    })
+}

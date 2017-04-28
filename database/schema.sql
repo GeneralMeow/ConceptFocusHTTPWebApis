@@ -8,4 +8,9 @@ CREATE TABLE travel (
   airline VARCHAR,
   hotel VARCHAR,
   budget INTEGER
-)
+);
+
+CREATE TABLE suitcase (
+  id SERIAL PRIMARY KEY,
+  item VARCHAR
+);
