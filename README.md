@@ -139,7 +139,8 @@ router.post('/create-itinerary', (request, response, next) => {
   `router.get('/404', (request, response) => {
   response.render('404')
 })`
-  - [ ] `500` (Internal Server Error)
+  - [X] `500` (Internal Server Error)
+  https://github.com/GeneralMeow/ConceptFocusHTTPWebApis/blob/master/routes/routes.js
   
 - [X] Examples of each status code usage are listed and linked to in the README
 - [X] The web server uses URL components in routing and responding
