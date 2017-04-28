@@ -181,30 +181,37 @@ router.post('/create-itinerary', (request, response, next) => {
 - [ ] Example of a raw HTTP request and the server's raw HTTP response are included in the README
   - [ ] Examples show full HTTP message header
   - [ ] Examples show full HTTP message body
-- [ ] The web server makes the following request types to an external API
+- [X] The web server makes the following request types to an external API
   - [X] Get a resource
+  
+  `const fetchWeather = () => {
+  const fetchUrl = 'http://api.openweathermap.org/data/2.5/forecast?id=2154624&APPID=253e1c4d472cec6a63788025b1f71efb'
+  return fetch(fetchUrl)
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+      }
+      // Examine the text in the response
+      return response.json()
+        .then(function(data) {
+          const weather = data.list[0].weather
+          return weather
+          // console.log(weather);
+        })
+      }
+    )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
+}
+`
+https://github.com/GeneralMeow/ConceptFocusHTTPWebApis/blob/master/routes/routes.js
   - [ ] Create a resource
   - [ ] Update a resource
   - [ ] Delete a resource
-- [ ] Examples of each request type to the external API are listed and linked to in the README
+- [X] Examples of each request type to the external API are listed and linked to in the README
 - [X] The best resources you find for learning testing are added to a file `resources.md`
 - [X] The artifact produced is properly licensed, preferably with the [MIT license][mit-license]
 
-
-
-
-
-
-
-
-
-## Stretch
-
-- [ ] Web server is written using _only the core Node.js modules_ (instead of Express, use the built-in [HTTP module][node-http])
-- [ ] Web server uses OAuth to authenticate with the external API
-- [ ] OAuth routes are listed and linked to in the README
-- [ ] The web server exposes a JSON API at `/api`
-  - [ ] API supports all CRUD actions for a resource (Create, Read, Update, Delete)
-  - [ ] API follows a the RESTful design convention
-  - [ ] API doesn't use database persistence (an in-memory store is fine)
-- [ ] Basic documentation for the API and each route is included in the README
