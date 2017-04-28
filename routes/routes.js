@@ -17,6 +17,7 @@ router.get('/new-itinerary', (request, response) => {
   response.render('new-itinerary')
 })
 
+//create new-itinerary
 router.post('/create-itinerary', (request, response, next) => {
   const {airline, hotel, budget} = request.body
     db.saveItinerary(airline, hotel, budget)
@@ -35,6 +36,11 @@ router.get('/itinerary', (request, response) => {
   .then( (values) => {
     response.render('itinerary', {values})
   })
+})
+
+//get packing list
+router.get('/edit', (request, response) => {
+  response.render('edit')
 })
 
 router.get('/contact', (request, response) => {
