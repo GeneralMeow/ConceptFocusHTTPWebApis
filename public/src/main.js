@@ -30,7 +30,11 @@ const redirectEdit = () => {
   window.location="/edit"
 }
 
-function clicky(i) {
+const redirectIntentionalServerError = () => {
+  window.location="/500"
+}
+
+const clicky = (i) => {
 
   let it = document.getElementById(i);
 
