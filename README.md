@@ -55,8 +55,7 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
   - [X] `GET`
   
   
-    `// get homepage
-    
+   `// get homepage
     router.get('/', (request, response) => {
       response.render('index')
     .then(() => {
@@ -142,11 +141,23 @@ router.post('/create-itinerary', (request, response, next) => {
 })`
   - [ ] `500` (Internal Server Error)
   
-- [ ] Examples of each status code usage are listed and linked to in the README
+- [X] Examples of each status code usage are listed and linked to in the README
 - [X] The web server uses URL components in routing and responding
   - [x] Different paths trigger different routes
   - [X] Values from the URL query string are used in a route
-- [ ] Examples of routing and query string usage are listed and linked to in the README
+- [X] Examples of routing and query string usage are listed and linked to in the README
+
+  `router.put('/itinerary/:id', (request, response, next) => {
+  const {item} = request.body
+  const {id} = request.params
+  db.updateSuitcase(id, item)
+  .then(() => {
+    response.sendStatus(201)
+  })
+  .catch((error) => {
+    return next(error)
+  })
+})`
 - [X] The web server makes use of the following request headers
   - [X] `Accept`
   - [ ] `Origin`
