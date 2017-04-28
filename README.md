@@ -104,7 +104,7 @@ router.post('/create-itinerary', (request, response, next) => {
     response.status(200)
   })
 })`
-    https://github.com/GeneralMeow/ConceptFocusHTTPWebApis/blob/master/routes/routes.js`
+    https://github.com/GeneralMeow/ConceptFocusHTTPWebApis/blob/master/routes/routes.js
   - [x] `201` (Created)
    `//create new-itinerary
 router.post('/create-itinerary', (request, response, next) => {
