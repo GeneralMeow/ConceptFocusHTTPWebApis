@@ -51,7 +51,7 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
 - [X] GitHub repo contains a web server.
 - [X] Can run the command `npm start` to start the web server at port 3000.
 - [X] The web server source code is written using the [Express][express] library.
-- [ ] The web server handles routes for the following HTTP verbs
+- [X] The web server handles routes for the following HTTP verbs
   - [X] `GET`
   
   
@@ -63,12 +63,38 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
     response.status(200)
   })
 })`
-
+    https://github.com/GeneralMeow/ConceptFocusHTTPWebApis/blob/master/routes/routes.js
   - [X] `POST`
+  
+  `//create new-itinerary
+router.post('/create-itinerary', (request, response, next) => {
+  const {airline, hotel, budget} = request.body
+    db.saveItinerary(airline, hotel, budget)
+    .then(() => {
+      response.redirect(201, 'itinerary')
+    })
+    .catch((error) => {
+      return next(error)
+    })
+})`
+  https://github.com/GeneralMeow/ConceptFocusHTTPWebApis/blob/master/routes/routes.js
   - [X] `PUT/PATCH`
-  - [ ] `DELETE`
-- [ ] Examples of each HTTP verb usage are listed and linked to in the README
-- [ ] The web server makes use of the following response status codes
+  
+  `router.put('/itinerary/:id', (request, response, next) => {
+  const {item} = request.body
+  const {id} = request.params
+  db.updateSuitcase(id, item)
+  .then(() => {
+    response.sendStatus(201)
+  })
+  .catch((error) => {
+    return next(error)
+  })
+})`
+    https://github.com/GeneralMeow/ConceptFocusHTTPWebApis/blob/master/routes/routes.js
+  - [X] `DELETE`
+- [X] Examples of each HTTP verb usage are listed and linked to in the README
+- [X] The web server makes use of the following response status codes
   - [x] `200` (OK)
   - [x] `201` (Created)
   - [ ] `400` (Bad Request)
@@ -77,11 +103,11 @@ An added benefit of working on a concept-focus goal is that you'll have a projec
   - [x] `404` (Not Found)
   - [x] `500` (Internal Server Error)
 - [ ] Examples of each status code usage are listed and linked to in the README
-- [ ] The web server uses URL components in routing and responding
+- [X] The web server uses URL components in routing and responding
   - [x] Different paths trigger different routes
-  - [ ] Values from the URL query string are used in a route
+  - [X] Values from the URL query string are used in a route
 - [ ] Examples of routing and query string usage are listed and linked to in the README
-- [ ] The web server makes use of the following request headers
+- [X] The web server makes use of the following request headers
   - [X] `Accept`
   - [ ] `Origin`
   - [X] `Content Type`
